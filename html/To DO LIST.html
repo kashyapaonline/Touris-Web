@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- fonts-->
+      <link
+         href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+         rel="stylesheet"
+         />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap"
+         rel="stylesheet"
+         />
+      <!--css links-->
+      <link rel="stylesheet" type="text/css" href="../css/pagelayout.css" />
+      <link href="../css/checkout.css" rel="stylesheet" type="text/css">
+       <link href="../css/todocss.css" rel="stylesheet" type="text/css">
+      <link href="../css/buyproducts.css" rel="stylesheet" type="text/css">
+      <title>
+         Todo |Pearl of the Indian Ocean
+      </title>
+      <link rel="icon" href="../images/logo2.png" type="image/icon type" />
+   </head>
+   <body>
+      <div role="navigation bar">
+         <ul class="main-navigation-ul">
+            <li>
+               <a class="main-navigation-logo" href="homepage.html"
+                  ><img src="../images/logo2.png" alt="logo"  height="45"
+                  /></a>
+            </li>
+            <li><a class="main-navigation-li" href="homepage.html">HOME</a></li>
+            <li><a class="main-navigation-li" href="destinations.html">DESTINATIONS</a></li>
+            <li><a class="active main-navigation-li" href="To DO LIST.html">To DO LIST</a></li>
+            <li><a class="main-navigation-li" href="gallery.html">GALLERY</a></li>
+            <li><a class="main-navigation-li" href="quiz.html">QUIZ</a></li>
+            <li><a class=" main-navigation-li" href="about.html">ABOUT</a></li>
+            <li><a class="main-navigation-li" href="contact.html">CONTACT US</a></li>
+         </ul>
+      </div>
+	  <img src="../images/products.png" alt="products-heading"  width="100%" 
+      role="img" aria-label="products page photo" /><!-- heading image -->
+      <!--all the products are displayed with name,price and add to cart button-->
+      
+      <!--to do list-->
+      
+	  
+	  
+	  
+	  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+      <div id="app">
+          <h3> To do List</h3>
+
+          <div class="container">
+              <input type="text" placeholder="new task" :style="{'background-color':color}" v-model="task" @keyup.enter="addTask">
+              <button @click="addTask">add <i class="fas fa-plus"></i> </button>
+          </div>
+
+          <br><br><br>
+          <ul class="list">
+              <li v-for="(t,index)in taskList":key="index"> {{t}}<i @click="removeTask(index)" class="fas fa-times"></i> </li>
+          </ul>
+
+      </div>
+      <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+
+
+
+
+
+
+
+
+
+      <!-- ------------------------------------------------website footer----------------------------------------------- -->
+      <div class="footer">
+          <div class="footer-content">
+              <div class="footer-img">
+                  <!-- website logo in footer -->
+                  <a href="homepage.html">
+                      <img
+                              src="../images/logo.png"
+                              alt="footer logo"
+                              width="85%"
+                              role="img" aria-label="link to home page"
+                      /></a>
+              </div>
+              <div class="footer-navigation text-left" role="navigation" aria-label="Main">
+                  <h2>Navigation</h2>
+                  <!-- footer navigation -->
+                  <ul class="no-bullet">
+                      <li><a href="homepage.html">Home</a></li>
+                      <li><a href="destinations.html">destinations</a></li>
+                      <li><a href="products.html">To Do List</a></li>
+                      <li><a href="gallery.html">Gallery</a></li>
+                      <li><a href="quiz.html">Quiz</a></li>
+                      <li><a href="about.html">About us</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                      <li> <a href="sitemap.html">Site Map</a></li>
+                  </ul>
+              </div>
+              <div class="footer-about">
+                  <!-- footer about area -->
+                  <h2>About Us</h2>
+                  <p class="justify-text">
+                      We created this website for our mini project  in webdesing.
+                      <br />
+                      This site contains information about tourist attractions in Sri Lanka,
+                      with detailed descriptions and images which will help you to plan your
+                      vacation.
+                      <br />
+                      Also we have some unique, export quality products made in Sri Lanka
+                      for the lowest rates.
+                  </p>
+              </div>
+              <div class="footer-contact">
+                  <!-- footer contact info -->
+                  <h2><strong>Contact Info</strong></h2>
+                  <p>
+                      +94 0710356852 <br /><br />
+                      Pearl of the Indian Ocean <br />
+                      Monaragaka rd, <br />
+                      Udabubula,<br />
+                      |Bibile.
+                  </p>
+              </div>
+          </div>
+          <hr class="footer-hr">
+          <div class="footer-content">
+              <div class="social-row">
+                  <!-- footer social media links with images -->
+                  <a href="">
+                      <img
+                              src="../images/instagram.png"
+                              alt="instagram"
+                              class="footer-icon"
+                              height="45"
+                              role="img" aria-label="instagram link of the website"
+                      />
+                  </a>
+                  <a href="">
+                      <img
+                              src="../images/fb.png"
+                              alt="facebook"
+                              class="footer-icon"
+                              height="45"
+                              role="img" aria-label="facebook link of the website"
+                      />
+                  </a>
+                  <a href="">
+                      <img
+                              src="../images/twitter.png"
+                              alt="twitter"
+                              class="footer-icon"
+                              height="45"
+                              role="img" aria-label="twitter link of the website"
+                      />
+                  </a>
+                  <a href="">
+                      <img
+                              src="../images/mail.png"
+                              alt="email"
+                              class="footer-icon"
+                              height="45"
+                              role="img" aria-label="email link of the website"
+                      />
+                  </a>
+              </div>
+          </div>
+          <hr class="footer-hr">
+          <!-- page credits-link to page editor page -->
+          <p class="page-credits">Created by <a href="page-editor-st2.html" target=\"_blank\">kashyapa</a></p>
+      </div>
+   </body>
+</html>
+
